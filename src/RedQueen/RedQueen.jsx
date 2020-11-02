@@ -5,7 +5,7 @@ const RedQueen = () => {
     let playbackRateRQ = 1;
     let playbackRateBG = 0;
 
-    /* Background animations */
+    
 const sceneryFrames =   [
     { transform: 'translateX(100%)' },
     { transform: 'translateX(-100%)' }   
@@ -59,20 +59,6 @@ const sceneryFrames =   [
            }
    });
 
-//   var redQueen_alice = redQueen_alice_sprite.animate(
-//   spriteFrames, {
-//     easing: 'steps(7, end)',
-//     direction: "reverse",
-//     duration: 600,
-//     playbackRate: 1,
-//     iterations: Infinity
-//   });
-  
-//   /* Alice tires so easily! 
-//     Every so many seconds, reduce their playback rate so they slow a little. 
-//   */
-//   var sceneries = [foreground1Movement, foreground2Movement, background1Movement, background2Movement];
-  
    const adjustBackgroundPlayback = () => {
      if (playbackRateRQ < .8){ 
       
@@ -90,26 +76,8 @@ const sceneryFrames =   [
      background1Movement.getAnimation().playbackRate = playbackRateBG;
      background2Movement.getAnimation().playbackRate = playbackRateBG;   
    }
-  // adjustBackgroundPlayback();
-  
-//   /* If Alice and the Red Queen are running at a speed of 1, the background doesn't move. */
-//   /* But if they fall under 1, the background slides backwards */
-//   setInterval( function() {
-//     /* Set decay */
-//     if (redQueen_alice.playbackRate > .4) {
-//       redQueen_alice.playbackRate *= .9;    
-//     } 
-//     adjustBackgroundPlayback();
-//   }, 3000);
-//   const goFaster = () => {
-//        playbackRateRQ *= 1.1;
-//     redQueen_alice.getAnimation().playbackRate = playbackRateRQ;
-  //   adjustBackgroundPlayback();
-  // }
 
    
-
-
 useEffect(()=>{
 
     let fg1animation = foreground1Movement.getAnimation();
